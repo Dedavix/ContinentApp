@@ -13,13 +13,9 @@
 		<p>
 			<a href="ListaCittà?code=${nazione.code}">${nazione.name}</a>
 		</p>
-	</c:forEach>
-	
+	</c:forEach>	
 	<div align="right" style="margin-down: 50px;">
-		<form action="ListaContinenti" method = "get">
-			<input type="submit" value="Indietro" />
-		</form>
+		<p><a href="ListaContinenti"><input type = button value ="Indietro"></a></p>
 	</div>
-
 </body>
 </html>

@@ -13,9 +13,7 @@
 		<p>${citta.name} ---> Abitanti: ${citta.population}</p>
 	</c:forEach>
 	<div align="right" style="margin-down: 50px;">
-		<form action="ListaNazioni" method = "post">
-			<input type="submit" value="Indietro" />
-		</form>
+		<p><a href="ListaNazioni"><input type = button value ="Indietro"></a></p>
 	</div>
 </body>
 </html>
