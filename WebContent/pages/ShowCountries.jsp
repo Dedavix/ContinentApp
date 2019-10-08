@@ -8,7 +8,6 @@
 <title>ListaNazioni</title>
 </head>
 <body>
-
 	<h1>Lista Nazioni:</h1>
 	<c:forEach items="${nazioni}" var="nazione">
 		<p>
@@ -16,6 +15,11 @@
 		</p>
 	</c:forEach>
 	
+	<div align="right" style="margin-down: 50px;">
+		<form action="ListaContinenti" method = "get">
+			<input type="submit" value="Indietro" />
+		</form>
+	</div>
 
 </body>
 </html>

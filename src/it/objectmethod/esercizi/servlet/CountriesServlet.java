@@ -21,11 +21,22 @@ public class CountriesServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		List<Country> nazioni = new ArrayList<Country>();
+		CountryDao dao = new CountryDao();
 
-		String continente = richiesta.getParameter("selezionato");
-
+		String continente = richiesta.getParameter("continentSel");
+		richiesta.getSession().setAttribute("continentSes", continente);
 		nazioni = dao.getCountries(continente);
-
+		richiesta.setAttribute("nazioni", nazioni);
+		richiesta.getRequestDispatcher("/pages/ShowCountries.jsp").forward(richiesta, risposta);
+	}
+	
+	protected void doPost(HttpServletRequest richiesta, HttpServletResponse risposta) throws ServletException, IOException {
+		List<Country> nazioni = new ArrayList<Country>();
+		CountryDao dao = new CountryDao();
+		
+		String continente = (String) richiesta.getSession().getAttribute("continentSes");
+		richiesta.getSession().setAttribute("continentSes", continente);
+		nazioni = dao.getCountries(continente);
 		richiesta.setAttribute("nazioni", nazioni);
 		richiesta.getRequestDispatcher("/pages/ShowCountries.jsp").forward(richiesta, risposta);
 	}

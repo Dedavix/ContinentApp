@@ -23,7 +23,7 @@ public class CountryDao {
 
 			// STEP 4: Execute a query
 			System.out.println("Creating statement...");
-			conn= ConnectionFactory.getConnection(0);
+			conn= ConnectionFactory.getConnection();
 			String sql;
 			sql = "SELECT * FROM country WHERE country.Continent = ?";
 			stmt = conn.prepareStatement(sql);
@@ -79,7 +79,7 @@ public class CountryDao {
 
 			// STEP 4: Execute a query
 			System.out.println("Creating statement...");
-			conn= ConnectionFactory.getConnection(0);
+			conn= ConnectionFactory.getConnection();
 			String sql;
 			sql = "SELECT  distinct country.Continent FROM country";
 			stmt = conn.prepareStatement(sql);

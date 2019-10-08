@@ -11,7 +11,7 @@
 
 	<h1>Lista Continenti:</h1>
 	<c:forEach items="${continenti}" var="continent">
-		<p><a href="ListaNazioni?selezionato=${continent}">${continent}</a></p>
+		<p><a href="ListaNazioni?continentSel=${continent}">${continent}</a></p>
 	</c:forEach>
 
 </body>

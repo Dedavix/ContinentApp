@@ -23,7 +23,7 @@ public class CityDao {
 
 			// STEP 4: Execute a query
 			System.out.println("Creating statement...");
-			conn = ConnectionFactory.getConnection(1);
+			conn = ConnectionFactory.getConnection();
 			String sql;
 			sql = "SELECT * FROM city WHERE city.CountryCode = ?";
 			stmt = conn.prepareStatement(sql);
